@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		828836632DB25FD300B814C2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 828836622DB25FD300B814C2 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		82DB04AF2DB19C9D002A3376 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		828836622DB25FD300B814C2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		82DB049C2DB19C9C002A3376 /* IRealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82DB04AE2DB19C9D002A3376 /* IRealAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRealAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82DB04B82DB19C9D002A3376 /* IRealAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRealAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,7 @@
 		82DB04932DB19C9C002A3376 = {
 			isa = PBXGroup;
 			children = (
+				828836622DB25FD300B814C2 /* README.md */,
 				82DB049E2DB19C9C002A3376 /* IRealApp */,
 				82DB04B12DB19C9D002A3376 /* IRealAppTests */,
 				82DB04BB2DB19C9D002A3376 /* IRealAppUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828836632DB25FD300B814C2 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
