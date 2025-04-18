@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		82DB04AF2DB19C9D002A3376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82DB04942DB19C9C002A3376 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82DB049B2DB19C9C002A3376;
+			remoteInfo = IRealApp;
+		};
+		82DB04B92DB19C9D002A3376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82DB04942DB19C9C002A3376 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82DB049B2DB19C9C002A3376;
+			remoteInfo = IRealApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		82DB049C2DB19C9C002A3376 /* IRealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		82DB04AE2DB19C9D002A3376 /* IRealAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRealAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82DB04B82DB19C9D002A3376 /* IRealAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRealAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		82DB049E2DB19C9C002A3376 /* IRealApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = IRealApp;
+			sourceTree = "<group>";
+		};
+		82DB04B12DB19C9D002A3376 /* IRealAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = IRealAppTests;
+			sourceTree = "<group>";
+		};
+		82DB04BB2DB19C9D002A3376 /* IRealAppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = IRealAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82DB04992DB19C9C002A3376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82DB04AB2DB19C9D002A3376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82DB04B52DB19C9D002A3376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		82DB04932DB19C9C002A3376 = {
+			isa = PBXGroup;
+			children = (
+				82DB049E2DB19C9C002A3376 /* IRealApp */,
+				82DB04B12DB19C9D002A3376 /* IRealAppTests */,
+				82DB04BB2DB19C9D002A3376 /* IRealAppUITests */,
+				82DB049D2DB19C9C002A3376 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		82DB049D2DB19C9C002A3376 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82DB049C2DB19C9C002A3376 /* IRealApp.app */,
+				82DB04AE2DB19C9D002A3376 /* IRealAppTests.xctest */,
+				82DB04B82DB19C9D002A3376 /* IRealAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		82DB049B2DB19C9C002A3376 /* IRealApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82DB04C22DB19C9D002A3376 /* Build configuration list for PBXNativeTarget "IRealApp" */;
+			buildPhases = (
+				82DB04982DB19C9C002A3376 /* Sources */,
+				82DB04992DB19C9C002A3376 /* Frameworks */,
+				82DB049A2DB19C9C002A3376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				82DB049E2DB19C9C002A3376 /* IRealApp */,
+			);
+			name = IRealApp;
+			packageProductDependencies = (
+			);
+			productName = IRealApp;
+			productReference = 82DB049C2DB19C9C002A3376 /* IRealApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		82DB04AD2DB19C9D002A3376 /* IRealAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82DB04C52DB19C9D002A3376 /* Build configuration list for PBXNativeTarget "IRealAppTests" */;
+			buildPhases = (
+				82DB04AA2DB19C9D002A3376 /* Sources */,
+				82DB04AB2DB19C9D002A3376 /* Frameworks */,
+				82DB04AC2DB19C9D002A3376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82DB04B02DB19C9D002A3376 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				82DB04B12DB19C9D002A3376 /* IRealAppTests */,
+			);
+			name = IRealAppTests;
+			packageProductDependencies = (
+			);
+			productName = IRealAppTests;
+			productReference = 82DB04AE2DB19C9D002A3376 /* IRealAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		82DB04B72DB19C9D002A3376 /* IRealAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82DB04C82DB19C9D002A3376 /* Build configuration list for PBXNativeTarget "IRealAppUITests" */;
+			buildPhases = (
+				82DB04B42DB19C9D002A3376 /* Sources */,
+				82DB04B52DB19C9D002A3376 /* Frameworks */,
+				82DB04B62DB19C9D002A3376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82DB04BA2DB19C9D002A3376 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				82DB04BB2DB19C9D002A3376 /* IRealAppUITests */,
+			);
+			name = IRealAppUITests;
+			packageProductDependencies = (
+			);
+			productName = IRealAppUITests;
+			productReference = 82DB04B82DB19C9D002A3376 /* IRealAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		82DB04942DB19C9C002A3376 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					82DB049B2DB19C9C002A3376 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					82DB04AD2DB19C9D002A3376 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 82DB049B2DB19C9C002A3376;
+					};
+					82DB04B72DB19C9D002A3376 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 82DB049B2DB19C9C002A3376;
+					};
+				};
+			};
+			buildConfigurationList = 82DB04972DB19C9C002A3376 /* Build configuration list for PBXProject "IRealApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 82DB04932DB19C9C002A3376;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 82DB049D2DB19C9C002A3376 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				82DB049B2DB19C9C002A3376 /* IRealApp */,
+				82DB04AD2DB19C9D002A3376 /* IRealAppTests */,
+				82DB04B72DB19C9D002A3376 /* IRealAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		82DB049A2DB19C9C002A3376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82DB04AC2DB19C9D002A3376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82DB04B62DB19C9D002A3376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		82DB04982DB19C9C002A3376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82DB04AA2DB19C9D002A3376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82DB04B42DB19C9D002A3376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		82DB04B02DB19C9D002A3376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82DB049B2DB19C9C002A3376 /* IRealApp */;
+			targetProxy = 82DB04AF2DB19C9D002A3376 /* PBXContainerItemProxy */;
+		};
+		82DB04BA2DB19C9D002A3376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82DB049B2DB19C9C002A3376 /* IRealApp */;
+			targetProxy = 82DB04B92DB19C9D002A3376 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		82DB04C02DB19C9D002A3376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "IReal a besoin de votre caméra pour réaliser ce test technique";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		82DB04C12DB19C9D002A3376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "IReal a besoin de votre caméra pour réaliser ce test technique";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		82DB04C32DB19C9D002A3376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"IRealApp/Preview Content\"";
+				DEVELOPMENT_TEAM = G9B2LM6D3L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = iReal;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "IReal a besoin de vos photos pour réaliser ce test technique";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "IReal a besoin de vos photos pour réaliser ce test technique";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicolaslaurent.IRealApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		82DB04C42DB19C9D002A3376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"IRealApp/Preview Content\"";
+				DEVELOPMENT_TEAM = G9B2LM6D3L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = iReal;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "IReal a besoin de vos photos pour réaliser ce test technique";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "IReal a besoin de vos photos pour réaliser ce test technique";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicolaslaurent.IRealApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		82DB04C62DB19C9D002A3376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9B2LM6D3L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicolaslaurent.IRealAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRealApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IRealApp";
+			};
+			name = Debug;
+		};
+		82DB04C72DB19C9D002A3376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9B2LM6D3L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicolaslaurent.IRealAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRealApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IRealApp";
+			};
+			name = Release;
+		};
+		82DB04C92DB19C9D002A3376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9B2LM6D3L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicolaslaurent.IRealAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IRealApp;
+			};
+			name = Debug;
+		};
+		82DB04CA2DB19C9D002A3376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9B2LM6D3L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicolaslaurent.IRealAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IRealApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		82DB04972DB19C9C002A3376 /* Build configuration list for PBXProject "IRealApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82DB04C02DB19C9D002A3376 /* Debug */,
+				82DB04C12DB19C9D002A3376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82DB04C22DB19C9D002A3376 /* Build configuration list for PBXNativeTarget "IRealApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82DB04C32DB19C9D002A3376 /* Debug */,
+				82DB04C42DB19C9D002A3376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82DB04C52DB19C9D002A3376 /* Build configuration list for PBXNativeTarget "IRealAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82DB04C62DB19C9D002A3376 /* Debug */,
+				82DB04C72DB19C9D002A3376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82DB04C82DB19C9D002A3376 /* Build configuration list for PBXNativeTarget "IRealAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82DB04C92DB19C9D002A3376 /* Debug */,
+				82DB04CA2DB19C9D002A3376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 82DB04942DB19C9C002A3376 /* Project object */;
+}
