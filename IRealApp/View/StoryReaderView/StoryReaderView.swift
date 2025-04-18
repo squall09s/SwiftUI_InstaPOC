@@ -14,17 +14,21 @@ import AVKit
 
 
 struct StoryReaderView: View {
+    
+    @ObservedObject var likeStore = LikeStore.shared
+    
+    @State private var isLiked = false
+    
     @StateObject private var viewModel: StoryReaderViewModel
     @State private var player: AVQueuePlayer? = nil
     @State private var looper: AVPlayerLooper? = nil
     @State private var progress: Double = 0.0
     @State private var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @Environment(\.dismiss) private var dismiss
-    @State private var showAddMenu = false
-
     
-    init(videoURL: URL) {
-        _viewModel = StateObject(wrappedValue: StoryReaderViewModel(backgroundVideoURL: videoURL))
+    
+    init(story: Story) {
+        _viewModel = StateObject(wrappedValue: StoryReaderViewModel(story: story))
     }
 
     var body: some View {
@@ -46,12 +50,28 @@ struct StoryReaderView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: proxy.size.width, height: proxy.size.height)
                         .onAppear {
-                            guard player == nil else { return }
-                            let queuePlayer = AVQueuePlayer()
-                            let item = AVPlayerItem(url: viewModel.backgroundVideoURL)
-                            looper = AVPlayerLooper(player: queuePlayer, templateItem: item)
-                            queuePlayer.play()
-                            player = queuePlayer
+                            
+                            guard let videoURL = viewModel.story.videoURL else {
+                                return
+                            }
+                            
+                            let asset = AVURLAsset(url: videoURL)
+                            asset.loadValuesAsynchronously(forKeys: ["playable"]) {
+                                var error: NSError? = nil
+                                let status = asset.statusOfValue(forKey: "playable", error: &error)
+
+                                if status == .loaded {
+                                    DispatchQueue.main.async {
+                                        let item = AVPlayerItem(asset: asset)
+                                        let queuePlayer = AVQueuePlayer()
+                                        looper = AVPlayerLooper(player: queuePlayer, templateItem: item)
+                                        queuePlayer.play()
+                                        player = queuePlayer
+                                    }
+                                } else {
+                                    print("Asset not playable: \(error?.localizedDescription ?? "Unknown error")")
+                                }
+                            }
                         }
                     
                     // Overlay layers
@@ -74,91 +94,32 @@ struct StoryReaderView: View {
                                 }
                             )
                     }
-                }
-                .overlay(
                     
+                    // Like button en bas à droite
                     VStack {
-                        // Top bar with Cancel and + menu
-                        HStack {
-                            Button("Cancel") {
-                                dismiss()
-                            }
-                            .foregroundColor(.white)
-
-                            Spacer()
-                            // Updated + button and expanding menu
-                            ZStack {
-                                // Main + button
-                                Button(action: {
-                                    withAnimation {
-                                        showAddMenu.toggle()
-                                    }
-                                }) {
-                                    Image(systemName: showAddMenu ? "xmark.circle.fill" : "plus.circle.fill")
-                                        .font(.title)
-                                        .foregroundColor(.white)
-                                }
-                                .frame(width: 44, height: 44)
-
-                                
-                            }
-                        }.background(Color.clear)
-
-                        // Expanding menu slides in from the right
-                        if showAddMenu {
-                            HStack{
-                                
-                                Spacer()
-                                
-                                VStack(spacing: 8) {
-                                    Button("Text") {
-                                        showAddMenu.toggle()
-                                        viewModel.addTextLayer("Example Text")
-                                    }
-                                    .padding(8)
-                                    .background(Color.black.opacity(0.7))
-                                    .foregroundColor(.white)
-                                    .cornerRadius(8)
-                                    
-                                    Button("Image") {
-                                        showAddMenu.toggle()
-                                        // TODO: present image picker
-                                    }
-                                    .padding(8)
-                                    .background(Color.black.opacity(0.7))
-                                    .foregroundColor(.white)
-                                    .cornerRadius(8)
-                                    
-                                    Button("Gif") {
-                                        showAddMenu.toggle()
-                                        // TODO: present GIF picker
-                                    }
-                                    .padding(8)
-                                    .background(Color.black.opacity(0.7))
-                                    .foregroundColor(.white)
-                                    .cornerRadius(8)
-                                }
-                                .background(Color.clear)
-                                
-                                
-                            }.transition(.move(edge: .trailing).combined(with: .opacity))
-                                .offset(x: -10, y: 10) // adjust vertical offset to appear below +
-                        }
-                        
                         Spacer()
-
-                        // Bottom bar with Save
                         HStack {
                             Spacer()
-                            Button("Save") {
-                                // TODO: implement save action
-                            }
-                            .foregroundColor(.white)
                             
-                        }.background(Color.clear)
+                            LikeButtonView(
+                                isLiked: Binding(
+                                    get: { likeStore.isLiked(viewModel.story.id) },
+                                    set: { _ in likeStore.toggle(viewModel.story.id) }
+                                )
+                            )
+                            .padding()
+                            
+                        }
                     }
-                    .padding()
-                )
+                }.contentShape(Rectangle()) // Permet de capter le gesture sur tout le ZStack
+                    .gesture(
+                        TapGesture(count: 2)
+                            .onEnded {
+                                withAnimation {
+                                    likeStore.toggle(viewModel.story.id)
+                                }
+                            }
+                    )
             }
             .onReceive(timer) { _ in
                 guard let player = player,
@@ -167,7 +128,6 @@ struct StoryReaderView: View {
                 progress = currentItem.currentTime().seconds / currentItem.duration.seconds
             }
         }
-        .navigationTitle("Édition Story")
         .onDisappear {
             // Stop playback and release resources
             player?.pause()
@@ -176,7 +136,7 @@ struct StoryReaderView: View {
             // Cancel the timer to avoid retain cycles
             timer.upstream.connect().cancel()
             
-            print("StoryEditorView cleaned up")
+            print("StoryPlayerView cleaned up")
         }
     }
 
@@ -208,5 +168,5 @@ struct StoryReaderView: View {
 
 #Preview {
     let url = Bundle.main.url(forResource: "sample_video", withExtension: "mp4")!
-    StoryReaderView(videoURL: url)
+    StoryReaderView(story: Story(id: "1", user: "", layers: [], videoURL: url, previewURL: ""))
 }

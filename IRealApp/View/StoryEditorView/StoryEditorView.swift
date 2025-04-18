@@ -60,13 +60,29 @@ struct StoryEditorView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: proxy.size.width, height: proxy.size.height)
                         .onAppear {
-                            guard player == nil else { return }
-                            let queuePlayer = AVQueuePlayer()
-                            let item = AVPlayerItem(url: viewModel.backgroundVideoURL)
-                            looper = AVPlayerLooper(player: queuePlayer, templateItem: item)
-                            queuePlayer.play()
-                            player = queuePlayer
+                            
+                            let videoURL = viewModel.backgroundVideoURL
+                            
+                            let asset = AVURLAsset(url: videoURL)
+                            asset.loadValuesAsynchronously(forKeys: ["playable"]) {
+                                var error: NSError? = nil
+                                let status = asset.statusOfValue(forKey: "playable", error: &error)
+
+                                if status == .loaded {
+                                    DispatchQueue.main.async {
+                                        let item = AVPlayerItem(asset: asset)
+                                        let queuePlayer = AVQueuePlayer()
+                                        looper = AVPlayerLooper(player: queuePlayer, templateItem: item)
+                                        queuePlayer.play()
+                                        player = queuePlayer
+                                    }
+                                } else {
+                                    print("Asset not playable: \(error?.localizedDescription ?? "Unknown error")")
+                                }
+                            }
                         }
+                    
+                    /*
                     
                     // Overlay layers
                     ForEach(viewModel.story.layers.indices, id: \.self) { idx in
@@ -88,6 +104,8 @@ struct StoryEditorView: View {
                                 }
                             )
                     }
+                     
+                     */
                 }
                 .overlay(
                     

@@ -14,7 +14,7 @@ final class StoryFeedViewModel: ObservableObject {
     @Published var stories: [Story] = []
     @Published var currentPage: Int = 0
     
-    func reloadMockStories() {
+    func loadFirstStories() {
         guard let url = URL(string: mockURLString) else {
             print("Invalid URL: \(mockURLString)")
             return
@@ -25,10 +25,13 @@ final class StoryFeedViewModel: ObservableObject {
                 let decoded = try JSONDecoder()
                     .decode(APIStoryResponse.self, from: data)
                 await MainActor.run {
+                    
+                    self.currentPage = 0
+                    
                     self.stories = decoded.stories.compactMap({ _story in
-                        return _story.toDomainStory()
+                        return _story.toDomainStory(currentPage: self.currentPage)
                     })
-                    self.currentPage = decoded.pagination.page
+                    
                 }
             } catch {
                 print("Failed to load stories: \(error)")
@@ -36,7 +39,7 @@ final class StoryFeedViewModel: ObservableObject {
         }
     }
     
-    func loadMockStories() {
+    func loadMoreStories() {
         guard let url = URL(string: mockURLString) else {
             print("Invalid URL: \(mockURLString)")
             return
@@ -47,10 +50,13 @@ final class StoryFeedViewModel: ObservableObject {
                 let decoded = try JSONDecoder()
                     .decode(APIStoryResponse.self, from: data)
                 await MainActor.run {
+                    
+                    self.currentPage = self.currentPage + 1
+                    
                     self.stories.append(contentsOf: decoded.stories.compactMap({ _story in
-                        return _story.toDomainStory()
+                        return _story.toDomainStory(currentPage: self.currentPage)
                     }))
-                    self.currentPage = decoded.pagination.page
+                    
                 }
             } catch {
                 print("Failed to load stories: \(error)")

@@ -48,13 +48,13 @@ struct APIStory: Codable, Identifiable {
     let filter: String
 
     /// Map API model to UI domain model
-    func toDomainStory() -> Story {
+    func toDomainStory(currentPage : Int) -> Story {
         // For now create a basic Story with image or video layer
         let story = Story(
-            id: UUID().uuidString, // évitons de récupérer l'ID du mock url pour pouvoir fake le scrool infini
+            id: id + "_page_\(currentPage)" , // évitons de récupérer l'ID du mock url pour pouvoir fake le scrool infini
             user: user.username,
             layers: [],
-            audioURL: URL(string: videoUrl),
+            videoURL: URL(string: videoUrl),
             previewURL: imageUrl,
             creationDate: createdAt
         )
@@ -75,9 +75,18 @@ struct Story: Identifiable {
     let id: String
     var user: String
     var layers: [StoryLayer]
-    var audioURL: URL?
+    var videoURL: URL?
     var previewURL: String
     var creationDate: String?
+    
+    init(id: String, user: String, layers: [StoryLayer], videoURL: URL? = nil, previewURL: String, creationDate: String? = nil) {
+        self.id = id
+        self.user = user
+        self.layers = layers
+        self.videoURL = videoURL
+        self.previewURL = previewURL
+        self.creationDate = creationDate
+    }
 }
 
 enum StoryLayer: Identifiable {
